@@ -22,6 +22,7 @@ These features are defined in [`client/src/lib/constants.ts`](client/src/lib/con
    npm run dev
    ```
    This runs the Express server with Vite in middleware mode for hot reloading.
+   The app is available at `http://localhost:5000`.
 
 ## Building & Deploying to GitHub Pages
 The project can be built and deployed to GitHub Pages using the provided scripts in `package.json`:
@@ -46,5 +47,7 @@ The project can be built and deployed to GitHub Pages using the provided scripts
    ```bash
    npm run deploy
    ```
-
 After deployment, your site will be available at the URL specified in the `homepage` field.
+The Vite configuration automatically uses `/AdGenieLandingPage/` as the base
+path when building for production, while local development runs from the root
+path.
