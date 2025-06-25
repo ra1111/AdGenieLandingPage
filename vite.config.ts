@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-export default defineConfig({
+export default defineConfig(async ({ command }) => ({
+  base: command === "serve" ? "/" : "/AdGenieLandingPage/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -28,4 +29,4 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
-});
+}));
