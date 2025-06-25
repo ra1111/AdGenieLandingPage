@@ -26,7 +26,6 @@ export default function Home() {
   // Log device type for debugging
   useEffect(() => {
     const deviceType = isMobile ? 'Mobile' : isTablet ? 'Tablet' : 'Desktop';
-    console.log(`Current device: ${deviceType}, Width: ${width}px`);
   }, [isMobile, isTablet, isDesktop, width]);
 
   return (
